@@ -1,0 +1,22 @@
+.f-footer{
+	height:120px;
+	background-color:#191a1e;
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	.copy-text{
+		margin-top:35px;
+		text-align:center;
+		font-size:14px;
+		color:#ccc;
+		line-height:24px;
+		height:48px;
+		a{
+			color:#666;
+			&:hover{
+				color:#999;
+			}
+		}
+	}
+}

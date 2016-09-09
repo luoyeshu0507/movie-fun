@@ -1,0 +1,85 @@
+@mixin cliptext{
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+.movie-list{
+	overflow:hidden;
+	padding-top:20px;
+	.movie-text-list{
+		float:left;
+		width:162px;
+		.link-list{
+			margin-top:-15px;
+			a{
+				display:block;
+				line-height:44px;
+				font-size:14px;
+			}
+		}
+	}
+	.movie-image-list{
+		float:left;
+		width:858px;
+		overflow:hidden;
+		.image-list{
+			width:880px;
+			li{
+				float:left;
+				width:128px;
+				margin-right:14px;
+				height:220px;
+				.image-a{
+					width:124px;
+					border:2px solid #c7b273;
+					display:block;
+					height:165px;
+					overflow:hidden;
+					position:relative;
+					img{
+						height:165px;
+						width:124px;
+						transition:transform .3s ease;
+					}
+					&:hover{
+						img{
+							transform:scale(1.15);
+						}
+					}
+					&:after{
+						content:attr(title);
+						position:absolute;
+						bottom:0;
+						left:0;
+						text-align:center;
+						background-color:rgba(0,0,0,.5);
+						width:100%;
+						line-height:24px;
+						font-size:14px;
+					}
+				}
+				.title-a{
+					display:block;
+					line-height:36px;
+					font-size:14px;
+					text-align:center;
+					color:#ccc;
+					@include cliptext;
+				}
+			}
+		}
+	}
+	.movie-title{
+		color:#fff;
+		line-height:70px;
+		strong{
+			font-size:20px;
+		}
+		em{
+			color:#c6b273;
+			font-style:normal;
+		}
+		a{
+		}
+	}
+}
